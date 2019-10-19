@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoluo.gmall.managerservice.mapper.BaseAttrInfoMapper">
+    <!--List<BaseAttrInfo> ListBaseAttrInfo(String catalog3Id);-->
+    <select id="ListBaseAttrInfo" resultMap="simplebaseAttrInfo">
+        SELECT
+            bai.id,
+            attr_name,
+            catalog3_id,
+            bav.id attr_value_id,
+            value_name,
+            attr_id
+        FROM
+            base_attr_info bai
+        JOIN base_attr_value bav ON bai.id = bav.attr_id
+        WHERE
+            bai.catalog3_id = #{spuId}
+
+    </select>
+
+   <!-- List<BaseAttrInfo> ListBaseAttr(String valueIds);-->
+    <select id="ListBaseAttr" resultMap="simplebaseAttrInfo">
+        SELECT
+        bai.id,
+        attr_name,
+        catalog3_id,
+        bav.id attr_value_id,
+        value_name,
+        attr_id
+        FROM
+        base_attr_info bai
+        JOIN base_attr_value bav ON bai.id = bav.attr_id
+        WHERE
+        bav.id IN (${value})
+
+    </select>
+
+    <resultMap id="baseAttrInfo" type="com.xiaoluo.gmall.bean.BaseAttrInfo">
+        <id property="id" column="id"></id>
+        <result property="attrName" column="attr_name"></result>
+        <result property="catalog3Id" column="catalog3_id"></result>
+        <collection property="attrValueList" ofType="com.xiaoluo.gmall.bean.BaseAttrValue">
+            <id property="id" column="attr_value_id"></id>
+            <result property="valueName" column="value_name"></result>
+            <result property="attrId" column="attr_id"></result>
+        </collection>
+    </resultMap>
+
+    <resultMap id="simplebaseAttrInfo" type="baseAttrInfo" autoMapping="true">
+        <id property="id" column="id"></id>
+        <collection property="attrValueList" ofType="baseAttrValue" autoMapping="true">
+            <id property="id" column="attr_value_id"></id>
+        </collection>
+    </resultMap>
+</mapper>

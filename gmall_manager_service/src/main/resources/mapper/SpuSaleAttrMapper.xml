@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoluo.gmall.managerservice.mapper.SpuSaleAttrMapper">
+    <!--List<SpuSaleAttr> getSpuSaleAttrList(String spuId);-->
+    <select id="getSpuSaleAttrList" resultMap="spuSaleAttrList">
+        SELECT
+            sa.id,
+            sa.spu_id,
+            sa.sale_attr_id,
+            sale_attr_name,
+            sv.id value_id,
+            sale_attr_value_name
+        FROM
+            spu_sale_attr sa
+        JOIN spu_sale_attr_value sv ON sa.sale_attr_id = sv.sale_attr_id
+        AND sa.spu_id = sv.spu_id
+        WHERE
+            sa.spu_id = #{spuId}
+    </select>
+
+    <select id="getSpuSaleAttrListandChecked"  resultMap="spuSaleAttrList">
+         SELECT sa.id ,sa.spu_id, sa.sale_attr_name,sa.sale_attr_id,
+        sv.id value_id,
+        sv.sale_attr_value_name,
+        skv.sku_id,
+        IF(skv.sku_id IS NOT NULL,1,0)  is_checked
+        FROM spu_sale_attr sa
+        INNER JOIN spu_sale_attr_value  sv ON  sa.spu_id=sv.spu_id AND sa.sale_attr_id=sv.sale_attr_id
+        LEFT JOIN sku_sale_attr_value skv ON skv.sale_attr_id= sa.sale_attr_id AND skv.sale_attr_value_id=sv.id AND skv.sku_id=#{skuId}
+        WHERE  sa.spu_id=#{spuId}
+        ORDER BY sv.sale_attr_id,sv.id
+    </select>
+
+    <resultMap id="spuSaleAttrList" type="spuSaleAttr">
+        <id property="id" column="id"></id>
+        <result property="spuId" column="spu_id"></result>
+        <result property="saleAttrId" column="sale_attr_id"></result>
+        <result property="saleAttrName" column="sale_attr_name"></result>
+        <collection property="spuSaleAttrValueList" ofType="spuSaleAttrValue" autoMapping="true">
+            <id property="id" column="value_id"></id>
+            <result property="spuId" column="spu_id"></result>
+            <result property="saleAttrId" column="sale_attr_id"></result>
+            <result property="saleAttrValueName" column="sale_attr_value_name"></result>
+        </collection>
+
+    </resultMap>
+</mapper>

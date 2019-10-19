@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>gmall_parent</artifactId>
+        <groupId>com.xiaoluo.gmall</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../gmall_parent/pom.xml</relativePath>
+    </parent>
+
+
+	<artifactId>gmall_item_web</artifactId>
+
+	<name>gmall_item_web</name>
+
+
+	<dependencies>
+        <dependency>
+            <groupId>com.xiaoluo.gmall</groupId>
+            <artifactId>gmall_util_web</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xiaoluo.gmall</groupId>
+            <artifactId>gmall_interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
