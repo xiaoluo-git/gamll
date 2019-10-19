@@ -2,7 +2,9 @@ package com.xiaoluo.gmall.manager.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.xiaoluo.gmall.bean.*;
+import com.xiaoluo.gmall.service.ListService;
 import com.xiaoluo.gmall.service.ManagerService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +14,9 @@ import java.util.List;
 public class ManagerController {
 	@Reference
 	private ManagerService managerService;
+
+	@Reference
+	private ListService listService;
 
 	@GetMapping("getCatalog1")
 	public List<BaseCatalog1> getCatalog1(){
@@ -44,6 +49,41 @@ public class ManagerController {
 		managerService.saveAttrInfo(baseAttrInfo);
 	}
 
+	@GetMapping("spuList")
+	public List<SpuInfo> getSpuList(String catalog3Id){
+		return managerService.listSpuInfo(catalog3Id);
+
+	}
+
+	@PostMapping("saveSpuInfo")
+	public String saveSpuInfo(@RequestBody SpuInfo spuInfo){
+		managerService.saveSpuInfo(spuInfo);
+		return "success";
+	}
+
+	@PostMapping("baseSaleAttrList")
+	public List<BaseSaleAttr> ListBaseSaleAttr(){
+		return managerService.ListBaseSaleAttr();
+	}
+
+	@GetMapping("spuImageList")
+	public List<SpuImage> getSpuImageList(String spuId){
+		return managerService.listSpuImageList(spuId);
+	}
+
+	@GetMapping("spuSaleAttrList")
+	public List<SpuSaleAttr> getSpuSaleAttrList(String spuId){
+		return managerService.getSpuSaleAttrList(spuId);
+	}
+
+	@GetMapping("onSale")
+	public void onSale(String skuId){
+		SkuLsInfo skuLsInfo = new SkuLsInfo();
+		SkuInfo skuInfoPage = managerService.getSkuInfoPage(skuId);
+		BeanUtils.copyProperties(skuInfoPage,skuLsInfo);
+		listService.saveSkuLsInfo(skuLsInfo);
+
+	}
 
 
 }

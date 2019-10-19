@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/gmall_user_manager/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_interface/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_order_web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_manager_web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_manager_service/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_item_web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_list_service/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_list_web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_passport_web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_user_manager_service/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gware-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall_payment/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

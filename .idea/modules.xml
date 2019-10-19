@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gamll.iml" filepath="$PROJECT_DIR$/gamll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-cart-service/gmall-cart-service.iml" filepath="$PROJECT_DIR$/gmall-cart-service/gmall-cart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-cart-web/gmall-cart-web.iml" filepath="$PROJECT_DIR$/gmall-cart-web/gmall-cart-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-order-service/gmall-order-service.iml" filepath="$PROJECT_DIR$/gmall-order-service/gmall-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_bean/gmall_bean.iml" filepath="$PROJECT_DIR$/gmall_bean/gmall_bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_interface/gmall_interface.iml" filepath="$PROJECT_DIR$/gmall_interface/gmall_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_item_web/gmall_item_web.iml" filepath="$PROJECT_DIR$/gmall_item_web/gmall_item_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_list_service/gmall_list_service.iml" filepath="$PROJECT_DIR$/gmall_list_service/gmall_list_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_list_web/gmall_list_web.iml" filepath="$PROJECT_DIR$/gmall_list_web/gmall_list_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_manager_service/gmall_manager_service.iml" filepath="$PROJECT_DIR$/gmall_manager_service/gmall_manager_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_manager_web/gmall_manager_web.iml" filepath="$PROJECT_DIR$/gmall_manager_web/gmall_manager_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_order_web/gmall_order_web.iml" filepath="$PROJECT_DIR$/gmall_order_web/gmall_order_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_parent/gmall_parent.iml" filepath="$PROJECT_DIR$/gmall_parent/gmall_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_passport_web/gmall_passport_web.iml" filepath="$PROJECT_DIR$/gmall_passport_web/gmall_passport_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_payment/gmall_payment.iml" filepath="$PROJECT_DIR$/gmall_payment/gmall_payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_user_manager_service/gmall_user_manager_service.iml" filepath="$PROJECT_DIR$/gmall_user_manager_service/gmall_user_manager_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_util_common/gmall_util_common.iml" filepath="$PROJECT_DIR$/gmall_util_common/gmall_util_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_util_service/gmall_util_service.iml" filepath="$PROJECT_DIR$/gmall_util_service/gmall_util_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall_util_web/gmall_util_web.iml" filepath="$PROJECT_DIR$/gmall_util_web/gmall_util_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gware-manage/gware-manage.iml" filepath="$PROJECT_DIR$/gware-manage/gware-manage.iml" />
+    </modules>
+  </component>
+</project>

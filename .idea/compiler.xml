@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gmall-cart-service" />
+        <module name="gmall-cart-web" />
+        <module name="gmall-order-service" />
+        <module name="gmall_bean" />
+        <module name="gmall_interface" />
+        <module name="gmall_item_web" />
+        <module name="gmall_list_service" />
+        <module name="gmall_list_web" />
+        <module name="gmall_manager_service" />
+        <module name="gmall_manager_web" />
+        <module name="gmall_order_web" />
+        <module name="gmall_passport_web" />
+        <module name="gmall_payment" />
+        <module name="gmall_user_manager" />
+        <module name="gmall_user_manager_service" />
+        <module name="gmall_util_common" />
+        <module name="gmall_util_service" />
+        <module name="gmall_util_web" />
+        <module name="gware-manage" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="fastdfs-client-java" target="1.6" />
+      <module name="gmall-cart-service" target="1.8" />
+      <module name="gmall-cart-web" target="1.8" />
+      <module name="gmall-order-service" target="1.8" />
+      <module name="gmall_bean" target="1.8" />
+      <module name="gmall_interface" target="1.8" />
+      <module name="gmall_item_web" target="1.8" />
+      <module name="gmall_list_service" target="1.8" />
+      <module name="gmall_list_web" target="1.8" />
+      <module name="gmall_manager_service" target="1.8" />
+      <module name="gmall_manager_web" target="1.8" />
+      <module name="gmall_order_web" target="1.8" />
+      <module name="gmall_parent" target="1.8" />
+      <module name="gmall_passport_web" target="1.8" />
+      <module name="gmall_payment" target="1.8" />
+      <module name="gmall_user_manager" target="1.8" />
+      <module name="gmall_user_manager_service" target="1.8" />
+      <module name="gmall_util_common" target="1.8" />
+      <module name="gmall_util_service" target="1.8" />
+      <module name="gmall_util_web" target="1.8" />
+      <module name="gware-manage" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
